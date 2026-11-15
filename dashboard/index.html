@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Launch Radar — pre-token protocols priced off the tokens that trade</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>Launch Radar</h1>
+    <p class="sub">Every pre-token protocol priced off the tokens that already trade &mdash; fitted, tested blind, and netted to a verdict.</p>
+    <p class="method" id="method-line"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="stats" id="stats"></section>
+
+  <section class="controls">
+    <input id="q" type="search" placeholder="Search name or slug&hellip;" aria-label="Search">
+    <select id="cat" aria-label="Category"><option value="">All categories</option></select>
+    <select id="chain" aria-label="Chain"><option value="">All chains</option></select>
+    <select id="verdict" aria-label="Verdict">
+      <option value="">All verdicts</option>
+      <option value="0">Farm</option>
+      <option value="1">Thin</option>
+      <option value="2">Skip</option>
+    </select>
+    <label class="wl"><input id="wlonly" type="checkbox"> Watchlist only</label>
+    <span class="count" id="count"></span>
+  </section>
+
+  <section class="panel tablewrap">
+    <table id="board">
+      <thead>
+        <tr>
+          <th data-sort="rank">#</th>
+          <th data-sort="name">Protocol</th>
+          <th data-sort="cat">Category</th>
+          <th>Chains</th>
+          <th data-sort="tvl">TVL</th>
+          <th data-sort="low">Implied value (low &ndash; high)</th>
+          <th data-sort="net">Net farm value</th>
+          <th data-sort="verdict">Verdict</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <p class="hint">Click a row for its detail view: value band, supporting traded records, netted farm plan and verdict.</p>
+  </section>
+
+  <section class="panel">
+    <h2>How this radar works</h2>
+    <div class="cols">
+      <div>
+        <h3>1 &middot; Clean the list first</h3>
+        <p id="clean-text"></p>
+      </div>
+      <div>
+        <h3>2 &middot; Fit a size curve</h3>
+        <p id="fit-text"></p>
+      </div>
+      <div>
+        <h3>3 &middot; Test it out of sample</h3>
+        <p id="test-text"></p>
+      </div>
+      <div>
+        <h3>4 &middot; Net every farm plan</h3>
+        <p id="net-text"></p>
+      </div>
+    </div>
+    <p class="note" id="growth-note"></p>
+  </section>
+
+  <section class="panel" id="detail" hidden>
+    <button id="close-detail" type="button">&times; close detail</button>
+    <h2 id="d-name"></h2>
+    <p class="d-sub" id="d-sub"></p>
+    <div class="cols">
+      <div>
+        <h3>Implied launch value</h3>
+        <p class="big" id="d-band"></p>
+        <p id="d-facts"></p>
+        <h3>What supports this number</h3>
+        <p>The three traded tokens nearest in size, same category first:</p>
+        <table class="mini" id="d-comps"></table>
+      </div>
+      <div>
+        <h3>Farm plan, netted to the dollar</h3>
+        <table class="mini" id="d-math"></table>
+        <ol class="steps" id="d-steps"></ol>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p id="foot"></p>
+    <p>Implied values are this entry&rsquo;s own claim, computed from the snapshot&rsquo;s figures alone; they are not a prediction that a token will launch, or when. &ldquo;Records no token&rdquo; means the snapshot records none, not that the protocol has none.</p>
+  </footer>
+</main>
+<div id="js-errors" hidden></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
