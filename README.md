@@ -1,7 +1,8 @@
 # Launch Radar — pre-token protocols priced off the tokens that trade
 
-[![Rank: top 10](https://img.shields.io/badge/rank-top_10-0e7c6b)](https://make.fun/bounty/token-radar-01)
-[![Reward: 1325 USDC](https://img.shields.io/badge/reward-1325_USDC-f2b705)](https://make.fun/bounty/token-radar-01)
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/Ikball53/token-radar-01-v4/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/Ikball53/token-radar-01-v4/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
 
 A token launch radar built for make.fun's `token-radar-01` bounty. It reads the
 sealed DefiLlama snapshot (758 protocols, 2026-11-14), cleans the list from the
